@@ -7,7 +7,7 @@ class CipherMaster:
         # с учетом переданного смещения shift.
         result = []
         for letter in text:
-            if is_encrypt == True:
+            if is_encrypt is True:
                 if letter.lower() in self.alphabet:  # здесь ваш код
                     index = self.alphabet.find(letter.lower())
                     new_index = (index + shift) % len(self.alphabet)
@@ -15,7 +15,7 @@ class CipherMaster:
                     result.append(new_letter)
                 else:
                     result.append(letter)
-            if is_encrypt == False:
+            if is_encrypt is False:
                 if letter.lower() in self.alphabet:  # здесь ваш код
                     index = self.alphabet.find(letter.lower())
                     new_index = (index - shift) % len(self.alphabet)
